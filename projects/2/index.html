@@ -1,0 +1,425 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>BUY_it – Shipping List Progresive Web App / Daniel's puddle of raindrops 🌧️</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/index.css">
+        <link rel="stylesheet" href="../../css/project.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+        <link rel="manifest" href="../../site.webmanifest">
+        <script defer src="../../js/index.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+<!-- HEADER -->
+            <header>
+                <a href="../../" class="home-logo-link">
+                    <div id="home-logo">
+                        <img src="../../images/logo.svg" alt="website's logo of a raininig cloud" id="home-logo-img">
+                        <h2 id="logo-text">deszczak</h2>
+                    </div>
+                </a>
+
+<!-- NAVIGATION -->
+                <nav id="nav-wrapper">
+                    <ul id="nav-list">
+                        <li>  <a href="../../">Projects</a>  </li>
+                        <li>  <a href="../../about.html">About me</a>  </li>
+                    </ul>
+                </nav>
+            </header>
+            
+
+
+            <main>
+<!-- PROJECT HEAD -->
+                <section class="project-head">
+                    <p class="project-date">August 1st, 2023</p>
+                    <h1 class="project-title">BUY_it – Shopping List Progresive Web App</h1>
+                    <p class="project-intro">Vanilla JavaScript PWA. Remembering things to buy outsourced to an app. Name it, describe it, prioritize it, tag it, link it...</p>
+                </section>
+<!-- HERO IMAGE -->
+                <img class="project-hero-img buy" src="https://buy.deszczak.work/social.png" alt="The main, hero picture of the project">
+
+
+
+<!-- SECTIONS BEGIN – TL;DR -->
+                <section class="project-section tldr">
+                    <h2 class="project-subheading" id="tldr">TL;DR</h2>
+                    <p class="tldr-see-project">
+                        See the project at <a href="https://buy.deszczak.work" target="_blank">buy.deszczak.work</a>
+                    </p>
+                    <p class="project-section-p">
+                        <b style="color: darkorange">Update (Aug 4th): </b>
+                        Version 1.2 has been published and is now available. <strong>The photo above presents v1.0</strong>.
+                    </p>
+                    <p class="project-section-p">
+                        <b>What is it: </b>
+                        A shopping list app that allows you to link and check items, set their tags and priority, filter them and edit whenever you need. Offline first based on local storage.</a>.
+                    </p>
+                    <p class="project-section-p">
+                        <b>Achieved with:</b> HTML, CSS, vanilla JavaScript, Netlify, Google Fonts & Material Icons, PWABuilder, some googling as well as my personal beta testers and users :)
+                    </p>
+                    <p class="project-section-p tldr-heading">
+                        <strong>Characteristics:</strong>
+                    </p>
+                    <ul class="project-section-list">
+                        <li>
+                            Works on <b>any device</b> and majority of the browsers, staying <b>fully responsive</b> even for <a href="#ref-1">the smallest of screens<sup>1</sup></a>.
+                        </li>
+                        <li>
+                            Fully <b>offlineable</b> – works offline making use of local storage.
+                        </li>
+                        <li>
+                            <b>Functionality</b> allows adding, checking, editing and removing items.
+                        </li>
+                        <li>
+                            Each item besides its name can have a description, amount, tags, priority and a link attached to it. <span class="bracket">(Based on potential user insights)</span>
+                        </li>
+                        <li>
+                            <b>Minimalistic</b> black and white design.
+                        </li>
+                        <li>
+                            Possibility of <b>filtering items</b> by their priority or tags.
+                        </li>
+                    </ul>
+                    <p class="project-section-p tldr-heading">
+                        <strong>Version 1.1:</strong>
+                        A few fixes and filtering functionality.
+                    </p>
+                    <ul class="project-section-list">
+                        <li>
+                            <span class="bracket">(Fix)</span> The modal window for adding and editing items appears now higher on mobile. <b>Stays above the keyboard</b>.
+                        </li>
+                        <li>
+                            <span class="bracket">(Fix)</span> Hashtags <span class="bracket">(#)</span> in the tag input are automatically <b>changed to commas</b> on save.
+                        </li>
+                        <li>
+                            Filtering now works with both <b>priority and tags at once</b>.
+                        </li>
+                    </ul>
+                    <p class="project-section-p tldr-heading">
+                        <strong>Version 1.2:</strong>
+                        Renovated header, new help section and a filtering option as well as a new visual aid.
+                    </p>
+                    <ul class="project-section-list">
+                        <li>
+                            <span class="bracket">(Based on user feedback)</span> Added a <b>"help" button</b> responsible for showing a modal with <b>information</b> about the app and <b>instructions</b> for it</b>.
+                        </li>
+                        <li>
+                            Filtering now has <b>its own section</b>, shows <b>currently chosen tag</b> and allows for <b>filtering of checked and unchecked</b> items.
+                        </li>
+                    </ul>
+                </section>
+
+
+
+<!-- WHAT'S THE CHALLENGE? -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="challenge" href="#challenge" aria-hidden="true"></a>
+                        What's the challenge?
+                    </h2>
+                    <p class="project-section-p">
+                        The challenge is to digitally standardize a <b>shopping list</b> by making a product people would want to use.
+                        It should be simple, easily accessible and deliver all user-needed functionality in the context of preparing for and going shopping – for both offline and online.
+                    </p>
+                </section>
+
+<!-- WHAT INSIGHTS DO I HAVE? -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="insights" href="#insights" aria-hidden="true"></a>
+                        What insights do I have?
+                    </h2>
+                    <p class="project-section-p">
+                        Talking to few of my friends and knowing my own needs I gathered information about necessary characteristics of the potential app and those that would be great to have.
+                        Previously I've also made a <a href="https://portfolio-mkoszyk.netlify.app/" target="_blank">shopping list app</a> for me and my flatmates which provided even more insights.
+                        Based on the conversations and experiences the necessary characteristics seemed to be:
+                    </p>
+                        <ol class="project-section-list">
+                            <li>
+                                <b>App</b> – works offline on a smartphone and is easily accessible as well as simple to use.
+                            </li>
+                            <li>
+                                <b>Item existence</b> – possibility to add, check, edit and remove it.
+                            </li>
+                            <li>
+                                <b>Item details</b> – option <span class="bracket">(not necessity)</span> to describe, in some way categorize and prioritize an item.
+                            </li>
+                            <li>
+                                <b>Design</b> – minimalistic and similar in placement of the functions to other popular apps.
+                            </li>
+                        </ol>
+                    <p class="project-section-p">
+                        There were some functions being described that didn't appear in everyone's statements but seemed like a great addition to the functionality of the app.
+                        They are presented in the list below: 
+                    </p>
+                        <ol class="project-section-list">
+                            <li>
+                                <b>Item details</b> – option to add a link to an item as well as the amount of it needed and a related shop.
+                            </li>
+                            <li>
+                                <b>Filtering</b> – possibility to filter items by their priority and the shop.
+                            </li>
+                            <li>
+                                <b>Design</b> – dark and light mode themes plus possibility to switch between the two.
+                            </li>
+                        </ol>
+                    <p class="project-section-p">
+                        There have also been two use cases brought up. People list things they want to buy <b>as soon as possible</b> as well as <b>some day in the future</b>. There were also different distincions made like: buing for myself and buying for others, buying personal stuff and things for work etc.
+                        It seems like there are a lot of things to be considered.
+                    </p>
+                    <p class="project-section-p">
+                        – <b>Insights for updates</b> – later, after the app was already published there appeared to be a few problems with the app, so the priority was to fix them but people using the app also proposed some new functionality:
+                    </p>
+                        <ol class="project-section-list">
+                            <li>
+                                <span class="bracket">(New)</span> <b>App</b> – create a "help" section describing the app, especially instructing on swiping/scrolling of the items on desktop.
+                            </li>
+                            <li>
+                                <span class="bracket">(Fix)</span> <b>Filtering</b> – doing it by categories/tags was already added but didn't work with priority at the same time.
+                            </li>
+                            <li>
+                                <span class="bracket">(New)</span> <b>Filtering</b> – possibility to filter by checked/unchecked items.
+                            </li>
+                        </ol>
+                </section>
+
+                <div class="section-img-between">
+                    <img class="img-between" src="./img/insights-ideas.webp" alt="A photo of two people ideating on a whiteboard by Kaleidico on Unsplash">
+                    <small>
+                        Photo by <a href="https://unsplash.com/@kaleidico?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kaleidico</a> on <a href="https://unsplash.com/photos/3V8xo5Gbusk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </small>
+                </div>
+
+<!-- WHAT IS THE IDEA/IDEAS? -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="ideas" href="#ideas" aria-hidden="true"></a>
+                        What are the ideas?
+                    </h2>
+                    <p class="project-section-p">
+                        There are always many ideas. Starting <b>from the big picture</b> perspective and <b>then going into details</b> seems to be working the best. That's why it is exactly what I&nbsp;did.
+                    </p>
+
+                    <h4 style="margin: 2rem 0 0">The big picture</h4>
+                    <p class="project-section-p">
+                        The project could be done as a&nbsp;<b>native mobile application</b> which would probably give the best outcomes but I&nbsp;haven't learned any native JS frameworks nor mobile languages yet.
+                        I&nbsp;could learn... but maybe another time. Even if I&nbsp;coded the app it would not be easy for me to publish and use it right away.
+                    </p>
+                    <p class="project-section-p">
+                        I can write <b>websites</b> so maybe I&nbsp;could code one... BUT I&nbsp;think nobody including me would want to open a browser and input the link or click on a&nbsp;bookmark every time. <b>Not to use a&nbsp;shopping list app.</b>
+                    </p>
+                    <p class="project-section-p">
+                        Coding a&nbsp;<strong>Progressive Web Application</strong> (PWA) isn't much different from writing a&nbsp;website though and I&nbsp;already have some experience doing that.
+                        It would not be as good as a&nbsp;native application especially when it comes to the installation process, but it'd still be better than a&nbsp;website. And most importantly – <b>at least I'd want to use it!</b>
+                    </p>
+
+                    <h4 style="margin: 2rem 0 0">The in-between</h4>
+                    <div class="text-img-pair">
+                        <div>
+                            <p class="project-section-p">
+                                Not going too far from the wider perspective it's important to assess <b>what kind of Javascript would be the best fit for the challenge</b>.
+                                Vanilla, Alpine and Svelte are my top 3 in terms of what I know and can use. I love using <b>Svelte</b> and it's still the one I used the least so it comes to my mind as the first and I'd happily make a full project using it to also learn more!
+                            </p>
+                            <p class="project-section-p" style="margin-top: 1rem;">
+                                Taking into consideration the situation I'm in career-wise I think it would be better for me to use <b>vanilla JavaScript</b> though.
+                                I already have a mostly Alpine.js oriented project to showcase. Making one in Svelte could be seen as good but probably more like 5 years from now.
+                                It's still rarely used in production as the majority of projects use React, Vue or even Angular. 
+                            </p>
+                            <p class="project-section-p" style="margin-top: 1rem;">
+                                Job requirements for Junior Frontend Devs call for good or even exelent knowledge of JS or the aforementioned frameworks but not others.
+                                Even though they all are JavaScript, in the end each of them works very differently, so it's understandable why great knowledge of vanilla JS is more valuable. 
+                                Because of it I think that delivering a <strong>vanilla JavaScript</strong> project should be my priority for better chances at further career development. 
+                            </p>
+                        </div>
+                        <img src="./img/idea-sketch.webp" alt="A notepad with sketches and notes of the app and a eraser as well as a pencil on it." class="img-in-pair">
+                    </div>
+
+                    <h4 style="margin: 2rem 0 0">The details</h4>
+                            <p class="project-section-p">
+                                As you can <span class="bracket">(or can't)</span> see on the picture above I've planned to divide the app into two lists based on the gathered insights.
+                                One would be for the items needed <b>as soon as possible</b> and other for those planned to be bought <b>some day</b>. 
+                                You'd be able to switch between the lists like you switch between tabs in Safari on iOS – by swiping <span class="bracket">(more on changing my mind later)</span>.
+                            </p>
+                            <p class="project-section-p">
+                                Items could be <b>pinned</b> to top <span class="bracket">(I might add this functionality later, for now the available filtering options seem to be good enough)</span>.
+                                There was also no tags function, but a place to write <b>"where"</b> a particulat item is planned to be bought. Later it came to me that <b>tags</b> could easily replace this idea simultaneously broadening app's functionality.
+                                I also thought items would be small pills in a grid/flexbox container with only their names visible <span class="bracket">(not a wise idea)</span>, but in a second I've changed my mind remembering previous experiences <span class="bracket">(oof!)</span>.
+                                It seemed like a great idea to be able to add item's <b>price</b> as well, but description already allowed that and it's not often that we know how much exactly a thing will cost.
+                                One last idea was being able to add <b>icons</b> to items for easier recognition but don't we already have emojis that can do exactly that and we're used to using them? Yeah.
+                            </p>
+                            <p class="project-section-p">
+                                While coding and using the app I came up with some new ideas myself and my beta testers helped with that ideation as well. But for now I will answer...
+                            </p>
+                </section>
+
+<!-- BEGIN THE WORK ––– START -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="plan" href="#plan" aria-hidden="true"></a>
+                        What's the plan?
+                    </h2>
+                        <ol class="project-section-list plan-section-list">
+                            <li>
+                                Code a <b>Progressive</b> – Offline First – <b>Web Application</b> using <em>vanilla JavaScript</em>:
+                            </li>
+                            <ul>
+                                <li>
+                                    Make its <b>design</b> minimalistic, simple and intuitive to use (utilizing <a href="#ref-2">Jakob's law<sup>2</sup></a> for example).
+                                </li>
+                                <li>
+                                    In terms of the <b>list functionality</b>, make it possible to add, check, edit and remove the items.
+                                </li>
+                                <li>
+                                    Each <b>item</b> should be allowed to have a&nbsp;name <span class="bracket">(the only obligatory position)</span>, description, amount, tags, priority and a&nbsp;link attached.
+                                </li>
+                                <li>
+                                    It should be possible to <b>filter</b> items based by their categorization <span class="bracket">(tags)</span> and priority.
+                                </li>
+                            </ul>
+                            <li>
+                                <b>Deploy</b> the app to Netlify with a <b>custom domain</b>.
+                            </li>
+                            <li>
+                                <b>Optimize</b> the PWA aspect of the app with PWABuilder.
+                            </li>
+                            <li>
+                                <b>Share</b> the app with frie... beta testers and actively <b>listen to feedback</b>.
+                            </li>
+                            <li>
+                                <b>Fix</b> any issues and <b>improve</b> the app. 
+                            </li>
+                        </ol>
+                </section>
+
+<!-- THE OBSTACLES ––– MIDDLE -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="obstacles" href="#obstacles" aria-hidden="true"></a>
+                        What are the obstacles?
+                    </h2>
+                    <p class="project-section-p">
+                        Looking at the plan above the only big obstacle might be related to <b>the app's design</b>. It should be easy and enjoyable to use. But how to achieve that?
+                        I researched other apps and found their assets, similarities, consistencies between them to use in my own design but also noticed that my idea of a shopping list is somewhat different than all of them.
+                    </p>
+                    <p class="project-section-p">
+                        I decide to go with the <b>insights</b> I gathered. Because of the small and somewhat biased sample it's hard to know what the design should be.
+                        I could gain from <b>usability tests</b> which I'll consider but the best evaluation of the design would probably be achieved by letting people use the it in the real world.
+                    </p>
+                    <p class="project-section-p">
+                        Some of us shop every day so there are many opportunities to "test" the app and tell later what are its <b>shortcomings and advantages</b>.
+                        I'll depend on the <b>feedback</b> and later possibly do more <b>UX research</b>.
+                    </p>
+                    <p class="project-section-p">
+                        None of the development part should be a problem. The project in it's necessry functionality seems to be an easy one so I don't expect any obstacles to occur.
+                        I'd like to make the <b>installation process</b> better than it is by default. This might be somewhat difficult as I've never before worked with PWA's installation JS events.
+                        I'm sure I'll learn and do it even if not for the first deployment :)
+                    </p>
+                </section>
+
+<!-- DEPLOYMENT ––– END -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="deployment" href="#deployment" aria-hidden="true"></a>
+                        I made it!
+                    </h2>
+                    <p class="project-section-p">
+                        I thought... <strong>Article to be continued...</strong>
+                    </p>
+                </section>
+
+<!-- IMPOROVEMENTS AND FIXES ––– AFTER END -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="improvements" href="#improvements" aria-hidden="true"></a>
+                        ...and I made it better!
+                    </h2>
+                    <p class="project-section-p">
+                        There are always things we can improve. Sometimes it's necessary to work on it immediately and sometimes it can wait a little. 
+                    </p>
+                    <p class="project-section-p">
+                        Some of the improvements can even wait until the v2 or another project, so...
+                    </p>
+                </section>
+
+<!-- POSSIBILITIES FOR IMPROVEMENT IN THE FUTURE -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="results" href="#results" aria-hidden="true"></a>
+                        The results and lessons learned
+                    </h2>
+                    <p class="project-section-p">
+                        Here I'll write about the things to be improved next time, all the lessons learned from the process and the results of this project.
+                    </p>
+                </section>
+
+<!-- REFERENCES AND ATTACHMENTS -->
+                <section class="project-section">
+                    <h2 class="project-subheading">
+                        <a id="ref-attach" href="#ref-attach" aria-hidden="true"></a>
+                        References and attachments
+                    </h2>
+                    <ul class="project-section-list">
+                        <li>
+                            <b>Project's website</b> – <a href="https://buy.deszczak.work" target="_blank">buy.deszczak.work</a>
+                        </li>
+                        <li>
+                            <sup id="ref-1">1 </sup>UX Pickle. What is the smallest screen size you should design for? @<a href="https://uxpickle.com/what-is-the-smallest-screen-size-you-should-design-for/" target="blank">uxpicle.com</a> 
+                        </li>
+                        <li>
+                            <sup id="ref-2">2 </sup>Yablonski Jon (2021). Prawa UX (<a href="https://lawsofux.com/" target="blank">Laws of UX</a>). Jak psychologia pomaga w projektowaniu lepszych produktów i usług 
+                        </li>
+                    </ul>
+                </section>
+
+
+
+<!-- OTHER PROJECTS -->
+                <div id="latest-project">
+                <hr class="latest-project-hr">
+                
+                    <h2 class="latest-project-h">Another project</h2>
+
+                    <section id="posts-grid">
+                        <a href="../1/" class="post-card-link">
+                            <article class="post-card">
+                                <div class="post-details">
+                                    <img src="../../images/pro_karzdy.png" class="post-image" alt="This is this post's image alt text">
+                                    <div>
+                                        <p class="post-date">Oct 5th, 2022</p>
+                                        <h3 class="post-title">Karzdy Pomorze – leveling up psychological research for my master's thesis</h3>
+                                        <p class="post-intro">
+                                            Video-making and coding a website to ultimatelly graduate with style.
+                                            <br>
+                                            <em>*Long version of the article is WIP*</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            </a>
+                    </section>
+                </div>
+            </main>
+
+
+
+<!-- FOOTER -->
+        <footer>
+            <p class="footer-inner">
+                <b>Daniel's puddle of raindrops</b>
+                <br>
+                <a href="mailto: deszczak@mail.com" class="mail-me">deszczak@mail.com</a>
+            </p>
+        </footer>
+        </div>
+
+        <img src="../../favicon-32x32.png" alt="I can take you to the top" id="to-the-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    </body>
+</html>

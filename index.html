@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>Daniel's puddle of raindrops 🌧️</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+    </head>
+    <body>
+        <div id="wrapper">
+<!-- HEADER -->
+            <header>
+                <a href="./" class="home-logo-link">
+                    <div id="home-logo">
+                        <img src="./images/logo.svg" alt="website's logo of a raininig cloud" id="home-logo-img">
+                        <h2 id="logo-text">deszczak</h2>
+                    </div>
+                </a>
+
+<!-- NAVIGATION -->
+                <nav id="nav-wrapper">
+                    <ul id="nav-list">
+                        <li>  <a href="./" data-active="true">Projects</a>  </li>
+                        <li>  <a href="./about.html">About me</a>  </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            
+            <main>
+            
+            <div id="main-intro">
+                <div id="main-intro-one">
+                    Hi! My name is <span id="main-intro-span-one">Daniel Leszczak 👋</span>
+                    <span id="main-intro-span-two">Laniel Deszczak 🤓</span>
+                </div>
+                <div id="main-intro-two">
+                    I am a <strong>Psychologist</strong> (<abbr title="Master of Science">MSc</abbr>/<wbr><abbr title="Magister">Mgr</abbr>), Academic&nbsp;<strong>Teacher</strong>, Frontend <strong>Developer</strong>, <strong>Researcher</strong>, UX&nbsp;freak and&nbsp;a&nbsp;<strong>Creative</strong>
+                </div>
+            </div>
+
+<!-- POSTS GRID -->
+            <section id="posts-grid">
+                <!-- <a href="#" class="post-card-link">
+                <article class="post-card">
+                    <div class="post-details">
+                        <img src="https://picsum.photos/id/3/650/690" class="post-image" alt="This is this post's image alt text">
+                        <div>
+                            <p class="post-date">Coming soon</p>
+                            <h3 class="post-title">DOit – a progressive web app for keeping track of things to do...</h3>
+                            <p class="post-intro">
+                                ...read, watch, listent to etc. Alpine.js and vanilla JavaScript app with reminder notifications, undos, progress visualization and more.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                </a> -->
+                
+                <a href="./projects/2/" class="post-card-link">
+                <article class="post-card">
+                    <div class="post-details">
+                        <img src="https://buy.deszczak.work/social.png" class="post-image" alt="This is this post's image alt text">
+                        <div>
+                            <p class="post-date">Aug 1st, 2023</p>
+                            <h3 class="post-title">BUY_it – Shopping List Progressive Web App</h3>
+                            <p class="post-intro">
+                                Vanilla JavaScript PWA. Remembering things to buy outsourced to an app. Name it, describe it, prioritize it, tag it, link it...
+                                <br>
+                                <em>*Long version of the article is WIP*</em>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                </a>
+                
+                <a href="./projects/1/" class="post-card-link">
+                <article class="post-card">
+                    <div class="post-details">
+                        <img src="./images/pro_karzdy.png" class="post-image" alt="This is this post's image alt text">
+                        <div>
+                            <p class="post-date">Oct 5th, 2022</p>
+                            <h3 class="post-title">Karzdy Pomorze – leveling up psychological research for my master's thesis</h3>
+                            <p class="post-intro">
+                                Video-making and coding a website to ultimatelly graduate with style.
+                                <br>
+                                <em>*Long version of the article is WIP*</em>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                </a>
+            </section>
+            </main>
+
+
+<!-- FOOTER -->
+        <footer>
+            <p class="footer-inner">
+                <b>Daniel's puddle of raindrops</b>
+                <br>
+                <a href="https://linkedin.com/in/leszczak" target="_blank" class="footer-social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </p>
+        </footer>
+        </div>
+
+        <script>
+            const posts = document.querySelectorAll('.post-card')
+
+            const isInView = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const image = entry.target.querySelector('.post-image')
+                    entry.isIntersecting ? image.classList.add('visible') : image.classList.remove('visible')
+                })
+            }, {threshold: 1})
+                        
+            posts.forEach(post => {
+                isInView.observe(post)
+            })
+        </script>
+    </body>
+</html>

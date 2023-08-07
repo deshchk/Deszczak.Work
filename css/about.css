@@ -1,0 +1,511 @@
+/* typography */
+
+.about-me-section h2 {   
+    font-size: 1.6rem;
+    text-align: center;
+    
+    padding: .3em .2em .2em;
+    margin-bottom: .25em;
+    
+    @media (min-width: 886px) {
+        margin-bottom: .4em;
+    }
+}
+
+.ams-container h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+    margin: 0 0 .15em;
+}
+
+#htc-two strong,
+#main-intro-two strong,
+#ams-intro strong {
+    font-weight: 500;
+    color: black;
+}
+
+#htc-two abbr,
+#main-intro-two abbr {
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    border-image: linear-gradient(90deg, #777, #777 30%, transparent 50%, transparent 100%) 9;
+    border-image-repeat: repeat;
+    cursor: help;
+}
+
+
+
+/* links */
+a[data-active="true"] {
+    color: var(--c-orange);
+}
+
+.social-link {
+    color: var(--c-black);
+    transition: color .1s;
+}
+
+.edex-wherewhen a {
+    border-bottom: 1px dashed var(--c-gray);
+}
+
+
+/* hovers */  
+    .social-link:hover
+    .social-link:focus
+    .social-link:active {
+        color: var(--c-orange);
+    }
+
+
+
+/* images */
+.mgr-sticker {
+    display: block;
+    height: 22rem;
+    width: auto;
+    
+    padding-left: .8rem;
+    margin-top: 3em;
+    margin-inline: auto;
+}
+
+.social-link i {
+    font-size: 32px;
+}
+
+.edu-img {
+    filter: brightness(1.3) contrast(.9);
+
+    @media (min-width: 900px) {
+        margin: 1.25em 0 2em;
+    }
+}
+
+
+
+/* containers */
+
+/* IDs */   
+    #hero-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        background: var(--c-main-blue) url('../images/clouds.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        padding: 1em;
+    }
+    
+    #htc-one:hover #htc-one-span-two,
+    #htc-one:active #htc-one-span-two,
+    #main-intro-one:hover #main-intro-span-two,
+    #main-intro-one:active #main-intro-span-two {
+        display: inline-block;
+    }
+    
+    #htc-one:hover #htc-one-span-one,
+    #htc-one:active #htc-one-span-one,
+    #main-intro-one:hover #main-intro-span-one,
+    #main-intro-one:active #main-intro-span-one {
+        display: none;
+    }
+    
+    #htc-one span,
+    #main-intro-one span {
+        font-weight: bold;
+    }
+    
+    #htc-one-span-one,
+    #main-intro-span-one {
+        display: inline-block;
+    }
+    
+    #htc-one-span-two,
+    #main-intro-span-two {
+        display: none;
+    }
+    
+    #htc-one,
+    #main-intro-one {        
+        letter-spacing: .01rem;
+        font-size: 1.7rem;
+    }
+
+    #htc-one {
+        padding-bottom: .5em;
+    }
+    
+    #htc-two,
+    #main-intro-two {
+        line-height: 1.5;
+    }
+    
+    #htc-three {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+        
+        padding-bottom: 1.9em;
+    }
+    
+    #about-me-sections {
+        padding: 1.5em;
+    }
+    
+    #ams-intro {
+        font-size: 1.4rem;
+        line-height: 1.35;
+        text-align: justify;
+        text-indent: clamp(1em, 14%, 3em);
+        font-style: italic;
+        
+        border: 1px solid var(--c-gray);
+        
+        padding: 1em 1.4em;
+        margin: .5em;
+        margin-bottom: 1.6em;
+        
+        @media (min-width: 1280px) {
+            margin-bottom: 2.5em;
+        }
+    }
+    
+    #skills-list-psychux .skills-list-item {
+        --c-skills: 30, 49%;
+    }
+    
+    #skills-list-creative .skills-list-item {
+        --c-skills: 191, 31%;
+        --c-skills-light: 50%;
+    }
+    
+    #skills-list-soft .skills-list-item {
+        --c-skills: 136, 32%;
+        --c-skills-light: 45%;
+    }
+    
+    #edex-sections {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+/* CLASSES */
+    .hero-text-cloud {
+        background: var(--c-white);
+        
+        text-align: center;
+        
+        padding: 1em;
+    }
+    
+    .about-me-section:not(:last-of-type) {
+        margin-bottom: 2em;
+        
+        @media (min-width: 1280px) {
+            margin-bottom: 3em;
+        }
+    }
+    
+    .ams-skills-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.8em 1.4em;
+        
+        @media (min-width: 886px) {
+            gap: 1.5em 1.4em;
+        }
+    }
+    
+    .skills-list {
+        list-style-type: none;
+        
+        flex-basis: 400px;
+        flex-grow: 1;
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .skills-list span,
+    .skills-list-item {
+        --c-skills: 7, 49%;
+        --c-skills-light: 60%;
+           
+        flex: 1;  
+        min-width: max-content;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        font-weight: 500;
+        line-height: 1rem;
+        
+        padding: .46em .8em;
+        
+        &.category {
+            border: 1px solid var(--c-gray);
+            filter: grayscale(1);
+            
+            @media (min-width: 886px) {
+                flex-basis: 100%;
+            }
+        }
+        
+        &.five {
+            background-color: hsl(var(--c-skills), var(--c-skills-light));
+            color: hsl(var(--c-skills), 95%);
+        }
+        &.four {
+            background-color: hsla(var(--c-skills), var(--c-skills-light), 50%);
+            color: hsl(var(--c-skills), 30%);
+            border: 1px solid hsl(var(--c-skills), 58%);
+        }
+        &.three {
+            background-color: hsla(var(--c-skills), var(--c-skills-light), 30%);
+            color: hsl(var(--c-skills), 40%);
+            border: 1px solid hsl(var(--c-skills), 70%);
+        }
+        &.two {
+            background-color: hsla(var(--c-skills), var(--c-skills-light), 10%);
+            color: hsl(var(--c-skills), 55%);
+            border: 1px dashed hsl(var(--c-skills), 70%);
+        }
+        &.one {
+            color: hsl(var(--c-skills), 65%);
+            border: 1px dashed hsl(var(--c-skills), 70%);
+        }
+    }
+    
+    .ams-container.edex {
+        flex: 1;
+        
+        line-height: 1.4;
+        letter-spacing: .005rem;
+        
+        border: 1px dashed var(--c-main-blue);
+        
+        padding: 1em;
+        
+        &.edu {
+            flex-basis: 400px;
+        }
+        &.exp {
+            flex-basis: 250px;
+            
+            &.previous {
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                
+                border-color: var(--c-gray);
+                               
+                padding-bottom: .9em;
+                
+                & a {
+                    color: var(--c-main-blue);
+                    font-weight: 500;
+                    border-bottom: 1px dashed var(--c-gray);
+                }
+            }
+        }
+    }
+    
+    .edex-what {
+        margin: 0;
+        color: var(--c-main-blue);
+        line-height: 1.4;
+    }
+    
+    .edex-wherewhen {
+        margin-top: .1rem;
+        color: #9a9a9a;
+    }
+
+    .edex-description {
+        margin: 0;
+    }
+    
+    .edex-desc-list {
+        margin: 0;
+    }
+    
+    .edex-desc-list li {
+        margin-bottom: .1em;
+    }
+
+    .ams-container.candc {
+        border: 1px dashed var(--c-main-blue);
+        padding: 1em;
+    }
+    
+    .certificate-list {
+        list-style-type: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1em;
+        
+        margin: 0;
+        padding: 0;
+        
+        & a {
+            flex: 1;
+            flex-basis: max-content;
+            text-align: center;
+            line-height: 1.3;
+        }
+    }
+    
+    .certificate-list li {
+        border-radius: 4px;
+        
+        font-size: 1.1rem;
+        
+        padding: .5em;
+        
+        &.important {
+            border: 1px dashed var(--c-gray);
+            & strong {
+                color: var(--c-orange)
+            }
+        }
+        
+        &.outside {
+            background: #fafafa;
+            color: var(--c-main-blue);
+            font-weight: 500;
+        }
+        
+        &:hover {
+            background: var(--c-white);
+        }
+        
+        & strong {
+            color: var(--c-main-blue);
+        }
+    }
+
+
+
+/* media queries */
+@media (min-width: 590px) {
+    #hero-section {
+        padding: 0;
+    }
+    
+    #htc-one {
+        max-width: 18ch;
+        scale: .8;
+        top: 35%;
+        border-top-right-radius: 0;
+        
+        font-size: 1.5rem;
+        
+        padding-bottom: 1em;
+    }
+    
+    #htc-two {
+        max-width: 30ch;
+        scale: .95;
+        top: 50%;
+        right: 1%;
+        border-top-left-radius: 0;
+        
+        background: white;
+    }
+    
+    #htc-three {        
+        max-width: 24ch;
+        bottom: 2em;
+        left: 3%;
+        border-top-right-radius: 0;
+        
+        gap: 1.4em;
+        padding: 1em 1.2em .9em;
+    }
+    
+    #htc-three i {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text-cloud {
+        position: absolute;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 697px) {   
+    #htc-one {
+        scale: 1;
+        top: 2rem;
+        right: 20%;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+    
+    #htc-two {
+        scale: 1;
+        top: 41%;
+        right: 5%;
+    }
+    
+    #htc-three {
+        bottom: 2rem;
+        right: 3.75%;
+        left: auto;
+        
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        
+        padding: 1em 1.2em;
+    }
+    
+    .mgr-sticker {
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 775px) {
+    #htc-one {
+        right: 30%;
+    }
+    
+    #htc-two {
+        right: 16%;
+    }
+    
+    #htc-three {
+        right: 8%;
+    }
+}
+
+@media (min-width: 840px) {
+    .mgr-sticker {
+        margin: 3em 0 0 10%;
+        align-self: baseline;
+    }
+    
+    #htc-three {
+        right: 10%;
+    }
+}
+
+@media (min-width: 1280px) {
+    #hero-section {
+        border-radius: 4px 4px 0 0;
+    }
+}
